@@ -1,5 +1,5 @@
 ; ==============================================================================
-; JOGO DA VELHA EM ASSEMBLY 
+; JOGO DA VELHA EM ASSEMBLY
 ; Compatível com o Processador ICMC
 ; ==============================================================================
 
@@ -149,35 +149,34 @@ linha_inferior:
 
 varre_linhas:
     loadn r0, #tabuleiro
-    add r0, r0, r4
+    add r0, r0, r4                   
     loadi r1, r0                     
     
     loadn r2, #0
     cmp r1, r2                       
     jeq proxima_linha
      
-    mov r5, r4
-    inc r5
-    add r0, r0, r5 
+    ; verifica a segunda casa da linha (anda +1)
+    inc r0 
     loadi r2, r0                     
-    cmp r1, r2
+    cmp r1, r2                       
     jne proxima_linha
     
-    mov r5, r4
-    inc r5
-    add r0, r0, r5 
+    ; verifica a terceira casa da linha (anda +1)
+    inc r0 
     loadi r3, r0                     
-    cmp r2, r3
+    cmp r2, r3                       
     jne proxima_linha
     
-    jmp tela_vitoria
+    jmp tela_vitoria                 
 
 proxima_linha:
     loadn r5, #3                     
-    add r4, r4, r5
-    loadn r5, #9
+    add r4, r4, r5                   
+    
+    loadn r5, #8
     cmp r4, r5
-    jle varre_linhas
+    jle varre_linhas                 
     
     loadn r4, #0
     jmp varre_colunas
@@ -285,7 +284,7 @@ testa_empate:
 tela_empate:
     loadn r0, #160                   
     loadn r1, #strVelha              
-    loadn r2, #2304                  ; printa alerta em vermelho
+    loadn r2, #2304                  ; printa alerta em Vermelho
     call escreve_texto
     
     loadn r0, #200                   
@@ -308,7 +307,7 @@ tela_vitoria:
     
     loadn r0, #162                   
     loadn r1, #strVencedor           
-    loadn r2, #512                   ; printa sucesso em verde
+    loadn r2, #512                   ; printa ucesso em Verde
     call escreve_texto
     
     loadn r0, #200                   
