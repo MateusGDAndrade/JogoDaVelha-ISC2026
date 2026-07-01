@@ -62,3 +62,11 @@ O jogo utiliza o sistema de atributos de cor do Processador ICMC para criar uma 
 * `valida_coordenada` / `calcula_posicao_video`: Validação matemática de posições e conversão de coordenadas físicas.
 * `varre_linhas` / `varre_colunas` / `varre_diagonais`: Algoritmos de varredura de matriz baseados em saltos da ULA.
 * `tela_vitoria` / `tela_empate` / `reinicia_sistema`: Tratamento de interrupção lógica de fim de jogo e reset de registradores.
+
+
+## Apresentação: 
+
+https://drive.google.com/file/d/1MHYEDvh4cjq8lCjkY69EMcVZZAw5-6CK/view?usp=sharing
+
+
+
